@@ -1,0 +1,9 @@
+.header {
+  background-color: #f1f8fe;
+  margin-bottom: 48px;
+  padding: 10px 0;
+}
+.inner {
+  width: 1024px;
+  margin: 0 auto;
+}
