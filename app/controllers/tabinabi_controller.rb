@@ -1,0 +1,2 @@
+class TabinabiController < ApplicationController
+end
