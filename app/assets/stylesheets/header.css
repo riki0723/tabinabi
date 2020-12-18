@@ -29,3 +29,10 @@
   background-color: rgb(252, 178, 129);
   border-top: red solid 1px;
 }
+
+.sub-inner{
+  width: 1024px;
+  margin: 0 auto; 
+  display: flex;
+  justify-content: space-around;
+}
