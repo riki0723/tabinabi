@@ -1,10 +1,19 @@
 <main class="main">
   <div class="inner">
-    <div class="top">
-        <h2>ユーザー新規登録</h2>
+    <div class="devise_top">
 
-        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-        <%= render "devise/shared/error_messages", resource: resource %>
+    <div class="devise_left">
+    ようこそ、旅nabiへ！
+    </div>
+
+    <div class="device_right">
+        <div class="devise_tytle">
+          <h2>ユーザー新規登録</h2>
+        <div>
+        
+        <div class="devise_body">
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= render "devise/shared/error_messages", resource: resource %>
         
           <div class="field">
             <%= f.label :ニックネーム %> <em>(6 characters maximum)</em><br />
@@ -28,14 +37,15 @@
             <%= f.label :パスワード（確認） %><br />
             <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
           </div>
-          
+        </div>
+
+        <div class="devise_foot">
           <div class="actions">
              <%= f.submit "ユーザー新規登録" %>
           </div>
-        <% end %>
-
-        <%= render "devise/shared/links" %>
-
+          <% end %>
+        </div>
+      </div>
     </div>
   </div>
 </main>
