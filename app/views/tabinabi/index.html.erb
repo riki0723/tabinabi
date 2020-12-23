@@ -26,6 +26,7 @@
               <%# <img src="/assets/Kiyomizu_Temple_-_01.jpg" alt="清水寺" class="card__img" /> %>
               <p class="card__summary">
                 <%= spot.text %>
+                <%= link_to '詳細', spot_path(spot.id), method: :get %>
               </p>
             </div>
           </div>
