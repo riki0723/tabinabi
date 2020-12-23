@@ -22,7 +22,8 @@
           <div class="card">
             <div class="card__body">
               <h2 class="card__title"><%= spot.name %></h2>
-              <img src="/assets/Kiyomizu_Temple_-_01.jpg" alt="清水寺" class="card__img" />
+              <%= image_tag spot.image.variant(resize: '500x500'), class: 'card__img' %>
+              <%# <img src="/assets/Kiyomizu_Temple_-_01.jpg" alt="清水寺" class="card__img" /> %>
               <p class="card__summary">
                 <%= spot.text %>
               </p>
