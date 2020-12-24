@@ -3,3 +3,4 @@
 <%= @spot.text%>
 
 <%= link_to '編集', edit_spot_path(@spot.id), method: :get %>
+<%= link_to '削除', spot_path {@spot.id}, method: :delete %>
