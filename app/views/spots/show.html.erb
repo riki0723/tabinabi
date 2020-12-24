@@ -1,3 +1,5 @@
 <%= @spot.name %>
 <%= image_tag @spot.image %>
 <%= @spot.text%>
+
+<%= link_to '編集', edit_spot_path(@spot.id), method: :get %>

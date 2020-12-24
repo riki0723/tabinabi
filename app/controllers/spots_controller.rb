@@ -11,6 +11,15 @@ class SpotsController < ApplicationController
     @spot = Spot.find(params[:id])
   end
 
+  def edit
+    @spot = Spot.find(params[:id])
+  end
+
+  def update
+    spot = Spot.find(params[:id])
+    spot.update(spot_params)
+  end
+
   private
   def spot_params
     params.require(:spot).permit(:name, :text, :image).merge(user_id: current_user.id)
