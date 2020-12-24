@@ -20,6 +20,11 @@ class SpotsController < ApplicationController
     spot.update(spot_params)
   end
 
+  def destroy
+    spot = Spot.find(params[:id])
+    spot.destroy
+  end
+
   private
   def spot_params
     params.require(:spot).permit(:name, :text, :image).merge(user_id: current_user.id)
