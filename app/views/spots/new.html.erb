@@ -1,8 +1,43 @@
+<main class="main">
+  <div class="inner">
+    <div class="top">
 
-<%= form_with model: @spot, local: true do |f| %>
+    <h1 class="page-heading">観光地登録</h1>
 
-<%= f.text_field :name, placeholder: "name" %>
-<%= f.text_area :text, placeholder: "text" %>
-<%= f.file_field :image, class: 'hidden' %>
-<%= f.submit "SEND" %>
-<% end %>
+    <%= form_with model: @spot, local: true do |f| %>
+    <div class="new_spot_form">
+
+      <div class="new_spot_form_first">
+        <div class="field">
+          <%= f.label :観光地名【必須】 %><br />
+          <%= f.text_field :name, placeholder: "place name" %>
+        </div>
+        <div class="field">
+          エリア【必須】
+        </div>
+        <div class="field">
+          <%= f.submit "登録", class:"button-spot" %>
+        </div>
+      </div>
+
+      <div class="new_spot_form_second">
+        <div class="field">
+          <%= f.label :観光地説明【必須】 %><br />
+          <%= f.text_area :text, size: "90x17",value: "text" %>
+        </div>
+      </div>
+
+      <div class="new_spot_form_therd">
+        <div class="field">
+          <%= f.label :画像【必須】 %><br />
+          <%= f.file_field :image, class: 'hidden' %>
+        </div>
+        <div class="field">
+          タグ
+        </div>
+      </div>
+    </div>
+    <% end %>
+    </div>
+  </div>
+</main>

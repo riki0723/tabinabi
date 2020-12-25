@@ -1,0 +1,32 @@
+.new_spot_form {
+  width: 80%;
+  margin-left: 20px;
+}
+.new_spot_form_first  {
+  display: flex;
+  justify-content:space-between;
+  height: 70px;
+  width: 80%;
+}
+
+.new_spot_form_second {
+  height: 350px;
+  margin: 10px 0 10px 0;
+}
+
+.new_spot_form_therd {
+  display: flex;
+  justify-content:space-between;
+  height: 70px;
+  width: 50%;
+  margin: 10px 0 10px 0;
+}
+.button-spot {
+  display: inline-block;
+  text-align: center;
+  padding: 13px 88px;
+  background: rgba(255, 127, 0, 0.78); 
+  color: #ffffff;
+  line-height: 1em;
+  box-shadow: 5px 5px 16px #666666;
+}
