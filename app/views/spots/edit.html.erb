@@ -2,6 +2,7 @@
 
 <%= form_with model:@spot, local: true do |f| %>
 <%= f.text_field :name, placeholder: "name" %>
+<%= f.file_field :image, placeholder: "image"%>
 <%= f.text_area :text, placeholder: "text" %>
 <%= f.submit "SEND" %>
 <% end %>

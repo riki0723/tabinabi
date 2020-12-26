@@ -1,6 +1,48 @@
-<%= @spot.name %>
-<%= image_tag @spot.image %>
-<%= @spot.text%>
+<main class="main">
+  <div class="inner">
+    <div class="top">
+      
+      <div class="show_title">
 
-<%= link_to '編集', edit_spot_path(@spot.id), method: :get %>
-<%= link_to '削除', spot_path {@spot.id}, method: :delete %>
+        <div class="show_title_left">
+          <h1 class="page-heading"><%= @spot.name %></h1>
+        </div>
+
+        <div class="show_title_right">
+          <a><%= link_to '編集', edit_spot_path(@spot.id), method: :get ,class:"show_btn" %></a>
+          <a><%= link_to '削除', spot_path {@spot.id}, method: :delete,class:"show_btn" %></a>
+        </div>
+        
+      </div>
+
+      <div class="show_main_first">
+        <div class="show_main_first_left">
+          <div class="main-image">
+            <%= image_tag @spot.image.variant(resize: '600x600')%>
+          </div>
+          <div class="sub_image">
+            複数の画像が入ります
+          </div>
+        </div>
+        <div class="show_main_first_right">
+          <div class="show_spot_name">
+            <h3>【エリア】：京都</h3>
+          </div>
+          <div class="tag_space">
+            #王道観光地
+          </div>
+        </div>
+      </div>
+
+      <div class="info_show">
+        <h3>【詳細】</h3>
+        <%= @spot.text%>
+      </div>
+
+      <div class="chat_show">
+        チャットが入る
+      </div>
+
+    </div> 
+  </div>
+</main>
