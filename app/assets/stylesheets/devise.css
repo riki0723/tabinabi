@@ -1,37 +1,49 @@
-
-.devise_top {
-  border: black solid 1px;
-  margin :0 auto;
-  height: 550px;
-  position: absolute;
+.device_body {
+  background-image: url("/assets/newdevise.jpg");
+  background-color:rgba(255,255,255,0.3);
+  background-blend-mode:lighten;
+  background-size:cover;  
+  padding: 30px 0 30px 0;
+  height: 450px;
   display: flex;
-  width: 80%;
-  padding: 5%;
-  background-image: url("/assets/tabinabitop.jpg");
-}
-.devise_left {
-  color: white;
-  width: 70%;
-  font-size: 30px;
-  height: 400px;
 }
 
-.device_right{
-  width: 30%;
-}
-
-.devise_tytle {
-  
-  height: 40px;
-  position: relative;
-  text-align: center;
-  color: white;
-}
-
-.devise_body {
-  border: tomato solid 1px;
-  margin: 10px 0;
-  padding: 10px 0;
-  background-color: white;
+.device_body_left {
   color: black;
+  text-shadow:
+    1px 0 0 white,
+    0 1px 0 white,
+    -1px 0 0 white,
+    0 -1px 0 white;
+  font-size: 40px;
+  padding: 30px 0 0 40px;
 }
+
+.device_body_right {
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-body {
+  background-color: white;
+  padding: 15px;
+  border: black solid 2px;
+  border-radius: 30px;
+}
+
+.button-device {
+  display: inline-block;
+  text-align: center;
+  padding: 13px 88px;
+  background: rgba(255, 127, 0, 0.78); 
+  color: #ffffff;
+  line-height: 1em;
+  box-shadow: 5px 5px 16px #666666;
+}
+.device_btn {
+  margin-top: 5px;
+  }
+
+
+
