@@ -26,7 +26,9 @@
         </div>
         <div class="show_main_first_right">
           <div class="show_spot_name">
+            <h3>【ユーザー】：マルマルさんの投稿です</h3>
             <h3>【エリア】：京都</h3>
+            <h3>【タグ】</h3>
           </div>
           <div class="tag_space">
             #王道観光地
@@ -36,7 +38,7 @@
 
       <div class="info_show">
         <h3>【詳細】</h3>
-        <%= @spot.text%>
+        <%= simple_format(@spot.text)%>
       </div>
 
       <div class="chat_show">
