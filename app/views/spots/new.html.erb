@@ -13,7 +13,8 @@
           <%= f.text_field :name, placeholder: "place name" %>
         </div>
         <div class="field">
-          エリア【必須】
+          <%= f.label :エリア【必須】 %><br />
+          <%= f.collection_select(:area_id, Area.all, :id, :name, {}, {class:"select-box"}) %>
         </div>
         <div class="field">
           <%= f.submit "登録", class:"button-spot" %>
