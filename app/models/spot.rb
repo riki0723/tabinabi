@@ -5,5 +5,6 @@ class Spot < ApplicationRecord
   has_one_attached :image
   
   validates :name, :text, presence: true
+  validates :area_id, numericality: { other_than: 1 } 
 
 end
