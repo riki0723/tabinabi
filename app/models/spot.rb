@@ -1,7 +1,10 @@
 class Spot < ApplicationRecord
-  
-  validates :name, :text, presence: true
-
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to :area
   belongs_to :user
   has_one_attached :image
+  
+  validates :name, :text, presence: true
+  validates :area_id, numericality: { other_than: 1 } 
+
 end
