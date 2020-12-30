@@ -1,0 +1,2 @@
+class SpotTagRelation < ApplicationRecord
+end
