@@ -31,7 +31,9 @@
             <h3>【タグ】</h3>
           </div>
           <div class="tag_space">
-            #王道観光地
+            <% @spot.tags.each do |tag| %>
+              #<%= tag.name %> 
+            <% end %>
           </div>
         </div>
       </div>
