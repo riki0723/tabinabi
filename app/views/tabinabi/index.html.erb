@@ -28,7 +28,7 @@
                 <%= image_tag spot.image.variant(resize: '500x500'), class: 'card__img' %>
                 <p class="card__summary">
                   <%= spot.text %>
-                  <%spot.tags.each do |tag| %>
+                  <% spot.tags.each do |tag| %>
                     #<%=tag.name%> 
                   <%end%>
                 </p>
