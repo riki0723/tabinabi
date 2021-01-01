@@ -6,7 +6,7 @@ class Spot < ApplicationRecord
   has_many :spot_tag_relations
   has_many :tags, through: :spot_tag_relations
   
-  validates :name, :text, presence: true
-  validates :area_id, numericality: { other_than: 1 } 
+  # validates :title, :text,:image, presence: true
+  # validates :area_id, numericality: { other_than: 1 } 
 
 end

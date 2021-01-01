@@ -1,10 +1,16 @@
 class SpotsController < ApplicationController
   def new
-    @spot = Spot.new
+    @spot = SpotsTag.new
   end
 
   def create
-    Spot.create(spot_params)
+    @spot = SpotsTag.new(spot_params)
+    if @spot.valid?
+      @spot.save
+      return redirect_to root_path
+    else
+      render "new"
+    end
   end
 
   def show
@@ -28,7 +34,7 @@ class SpotsController < ApplicationController
 
   private
   def spot_params
-    params.require(:spot).permit(:name, :text, :image, :area_id).merge(user_id: current_user.id)
+    params.require(:spots_tag).permit(:title, :text, :image, :area_id, :name).merge(user_id: current_user.id)
   end
 
 end

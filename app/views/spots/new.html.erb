@@ -4,13 +4,13 @@
 
     <h1 class="page-heading">観光地登録</h1>
 
-    <%= form_with model: @spot, local: true do |f| %>
+    <%= form_with model: @spot, url: spots_path, local: true do |f| %>
     <div class="new_spot_form">
 
       <div class="new_spot_form_first">
         <div class="field">
           <%= f.label :観光地名【必須】 %><br />
-          <%= f.text_field :name, placeholder: "place name" %>
+          <%= f.text_field :title, placeholder: "place name" %>
         </div>
         <div class="field">
           <%= f.label :エリア【必須】 %><br />
@@ -34,7 +34,8 @@
           <%= f.file_field :image, class: 'hidden' %>
         </div>
         <div class="field">
-          タグ
+          <%= f.label :name, "タグ" %>
+          <%= f.text_field :name, class:"input-tag" %>
         </div>
       </div>
     </div>
