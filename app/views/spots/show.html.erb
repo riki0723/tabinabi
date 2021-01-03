@@ -5,7 +5,7 @@
       <div class="show_title">
 
         <div class="show_title_left">
-          <h1 class="page-heading"><%= @spot.name %></h1>
+          <h1 class="page-heading"><%= @spot.title %></h1>
         </div>
 
         <div class="show_title_right">
@@ -18,7 +18,7 @@
       <div class="show_main_first">
         <div class="show_main_first_left">
           <div class="main-image">
-            <%= image_tag @spot.image.variant(resize: '600x600')%>
+            <%= image_tag @spot.image.variant(resize: '600x600') %>
           </div>
           <div class="sub_image">
             複数の画像が入ります
@@ -31,7 +31,9 @@
             <h3>【タグ】</h3>
           </div>
           <div class="tag_space">
-            #王道観光地
+            <% @spot.tags.each do |tag| %>
+              #<%= tag.name %> 
+            <% end %>
           </div>
         </div>
       </div>

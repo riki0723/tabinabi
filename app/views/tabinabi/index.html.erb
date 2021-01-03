@@ -24,10 +24,13 @@
           <div class="card">
             <%= link_to spot_path(spot.id), method: :get  do%>
               <div class="card__body">
-                <h2 class="card__title"><%= spot.name %></h2>
+                <h2 class="card__title"><%= spot.title %></h2>
                 <%= image_tag spot.image.variant(resize: '500x500'), class: 'card__img' %>
                 <p class="card__summary">
                   <%= spot.text %>
+                  <% spot.tags.each do |tag| %>
+                    #<%= tag.name %> 
+                  <%end%>
                 </p>
               </div>
             <% end %>
