@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Tabinabi</title>
+    <title>Tabinavi</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -14,7 +14,7 @@
     <header class="header">
       <div class="inner">
         <div class="main-header">
-          <a class="logo">旅nabi.</a>
+          <%= link_to '旅navi.', root_path, class:"logo" %> 
           <% if user_signed_in? %>
             <a class="btn1"><%= link_to "観光地登録", new_spot_path %></a>
             <a class="btn2"><%= link_to current_user.nickname, "/users/#{current_user.id}" %></a>
@@ -28,7 +28,6 @@
     </header>
     <div class="sub-header">
       <div class="sub-inner">
-      <div class="sub">TOP</div>
       <div class="sub">北海道・東北</div>
       <div class="sub">関東</div>
       <div class="sub">北陸</div>
