@@ -13,6 +13,7 @@
   width: calc((100% - 75px) / 2);
   margin-bottom: 40px;
   border: black double 3px;
+  /* background-color: blanchedalmond; */
 }
 
 .card__body {

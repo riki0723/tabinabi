@@ -9,6 +9,7 @@ require("@rails/activestorage").start()
 require("channels")
 require("../imagetop")
 require("./tag")
+require("../btn")
 
 
 
