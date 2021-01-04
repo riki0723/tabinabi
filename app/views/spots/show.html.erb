@@ -9,8 +9,10 @@
         </div>
 
         <div class="show_title_right">
+        <% if user_signed_in? && current_user.id == @spot.user_id %>
           <a><%= link_to '編集', edit_spot_path(@spot.id), method: :get ,class:"show_btn" %></a>
           <a><%= link_to '削除', spot_path {@spot.id}, method: :delete,class:"show_btn" %></a>
+        <% end %>
         </div>
         
       </div>
