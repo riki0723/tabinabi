@@ -8,6 +8,10 @@
   margin: 0 auto; 
 }
 
+.main-header{
+  display: flex;
+}
+
 .logo {
   color: white;
   font-size: 35px;
@@ -30,9 +34,42 @@
   border-top: red solid 1px;
 }
 
+.user-list{
+  font-size: 17px;
+  margin-top: 8px;
+  padding: 6px 10px;
+  border: red solid 1px;
+  background-color: white;
+}
+
 .sub-inner{
   width: 1024px;
   margin: 0 auto; 
   display: flex;
   justify-content: space-around;
+}
+
+.main-header-left{
+  width: 70%;
+}
+.main-header-right{
+  position: relative;
+}
+
+.show-lists{
+  width: 150px;
+  position: absolute;
+  left: 110px;
+  top: 10px;
+  background-color: #ffffff;
+  border: black solid 1px;
+}
+
+.pull-down-list{
+  padding: 5px;
+  border: 1px solid #eee;
+}
+
+.hidden{
+  display: none;
 }
