@@ -10,15 +10,28 @@
   align-items: center;
 }
 .card {
-  width: calc((100% - 50px) / 3);
+  width: calc((100% - 75px) / 2);
   margin-bottom: 40px;
+  border: black double 3px;
+  /* background-color: blanchedalmond; */
+}
+
+.card__body {
+  display: flex;
+}
+
+.card__body__right{
+  padding-left: 5px;
+  font-size: 18px;
 }
 .card__img {
   margin-bottom: 16px;
+  padding-left: 8px;
 }
 .card__title {
   font-size: 24px;
   margin-bottom: 8px;
+  padding-left: 8px;
 }
 .card__summary {
   font-size: 18px;

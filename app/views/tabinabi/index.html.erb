@@ -6,7 +6,7 @@
           <img src="/assets/tabinabitop.jpg" alt="清水寺" id="image-change1" class="top_img">
           <img src="/assets/tabinabitop2.jpg" alt="清水寺" id="image-change2" class="top_img">
           <img src="/assets/tabinabitop3.jpg" alt="清水寺" id="image-change3" class="top_img">
-          <p class="top_name">旅nabi.</p>
+          <p class="top_name">旅navi.</p>
         <div>
 
         <div class="info">
@@ -21,17 +21,26 @@
         <h1 class="page-heading">観光地一覧</h1>
         <div class="card__wrapper">
          <% @spots.each do |spot| %>
-          <div class="card">
+          <div class="card" >
             <%= link_to spot_path(spot.id), method: :get  do%>
+            <h2 class="card__title"><%= spot.title %></h2>
               <div class="card__body">
-                <h2 class="card__title"><%= spot.title %></h2>
-                <%= image_tag spot.image.variant(resize: '500x500'), class: 'card__img' %>
-                <p class="card__summary">
-                  <%= spot.text %>
+                <div class="card__body__left">
+                  <%= image_tag spot.image.variant(gravity: :center, resize:"250x200^", crop:"250x200+0+0"), class: 'card__img' %>
+                </div>
+                <div class="card__body__right">
+                <div>
+                  【user】/<%= spot.user.nickname %>
+                </div>
+                <div>
+                  【area】/<%= spot.area.name %>
+                </div>
+                <div>
                   <% spot.tags.each do |tag| %>
-                    #<%= tag.name %> 
+                    【tag】#<%= tag.name %> 
                   <%end%>
-                </p>
+                </div>
+                </div>
               </div>
             <% end %>
           </div>
