@@ -29,8 +29,8 @@
                 <li class="pull-down-list"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
               </ul>
             <% else %>
-              <a class="btn1"><%= link_to "ログイン", new_user_session_path %></a>
-              <a class="btn2"><%= link_to "ユーザー新規", new_user_registration_path %></a>
+              <div class="mein-header-login-btn"><%= link_to "ログイン", new_user_session_path %></div>
+              <div class="mein-header-login-btn"><%= link_to "ユーザー新規", new_user_registration_path %></div>
             <% end %>
           </div>
         </div>
