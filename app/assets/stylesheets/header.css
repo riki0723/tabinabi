@@ -73,3 +73,18 @@
 .hidden{
   display: none;
 }
+
+
+
+.footer {
+  background-color: #999;
+  padding: 10px 0;
+  margin-top: 80px;
+  height: 80px;
+}
+.copyright {
+  text-align: center;
+  margin-top: 18px;
+  color: #fff;
+  font-size: 10px;
+}
