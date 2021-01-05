@@ -17,16 +17,6 @@
   font-size: 35px;
 }
 
-.btn1 {
-  font-size: 20px;
-  margin:0 30px 0 400px;
-}
-
-.btn2 {
-  font-size: 20px;
-  margin: 0 30px;
-}
-
 .sub-header {
   margin-bottom: 48px;
   padding: 10px 0;
@@ -40,6 +30,13 @@
   padding: 6px 10px;
   border: red solid 1px;
   background-color: white;
+}
+
+.mein-header-login-btn {
+  border: red solid 1px;
+  background-color: seashell;
+  width: 110px;
+  padding: 0 3px 0 3px;
 }
 
 .sub-inner{
