@@ -82,7 +82,41 @@
   padding: 10px;
 }
 
-.chat_show {
-  height: 500px;
-  background-color: darkturquoise;
+.chat_info{
+  margin-bottom: 10px;
+}
+
+.message_show {
+  border: orange solid 1px;
+  overflow-y: scroll;
+  height: 200px;
+  padding-left: 20px;
+}
+
+.message_form{
+  background-color:rgb(255, 231, 187);
+  height: 90px;
+  padding: 20px 40px;
+  display: flex;
+}
+
+.form-input {
+  background-color: white;
+  width: 80%;
+}
+.form-message {
+  border: none;
+  height: 50px;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.form-submit {
+  background-color: orange;
+  border: none;
+  color: white;
+  font-size: 16px;
+  height: 50px;
+  margin-left: 15px;
+  padding: 0 20px;
 }

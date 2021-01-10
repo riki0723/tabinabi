@@ -15,6 +15,8 @@ class SpotsController < ApplicationController
 
   def show
     @spot = Spot.find(params[:id])
+    @messages = @spot.messages.includes(:user)
+    @message = Message.new
 
   end
 

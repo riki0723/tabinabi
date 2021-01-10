@@ -46,7 +46,29 @@
       </div>
 
       <div class="chat_show">
-        チャットが入る
+        <h3>【追加情報】</h3>
+        <div class="chat_info">
+          観光地の他の魅力やオススメスポットを皆で共有しましょう！！
+        </div>
+        <div class="message_show">
+          <div id='messages'>
+            <% @messages.reverse_each do |message| %>
+            <p><%= message.text %></p>
+            <% end %>
+          </div>
+        </div>
+        <%# <div class="message_form"> %>
+        <%= form_with model: [@spot, @message] do |f| %>
+        <div class="message_form">
+          <div class="form-input">
+            <%= f.text_field :text ,class:"form-message"%>
+          </div>
+          <div class="form-btn">
+            <%= f.submit '送信',class:"form-submit"  %>
+          </div>
+         </div>
+        <% end %>
+        <%# </div> %>
       </div>
 
     </div> 
