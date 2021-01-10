@@ -46,7 +46,19 @@
       </div>
 
       <div class="chat_show">
-        チャットが入る
+        <h3>【追加情報】</h3>
+
+
+          <div id='messages'>
+             <% @messages.reverse_each do |message| %>
+             <p><%= message.text %></p>
+           <% end %>
+
+          <%= form_with model: [@spot, @message] do |f| %>
+          <%= f.text_field :text %>
+          <%= f.submit '送信' %>
+          <% end %>
+</div>
       </div>
 
     </div> 
