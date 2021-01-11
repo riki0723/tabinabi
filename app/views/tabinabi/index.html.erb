@@ -29,18 +29,21 @@
                   <%= image_tag spot.image.variant(gravity: :center, resize:"250x200^", crop:"250x200+0+0"), class: 'card__img' %>
                 </div>
                 <div class="card__body__right">
-                <div>
-                  【user】/<%= spot.user.nickname %>
-                </div>
-                <div>
-                  【area】/<%= spot.area.name %>
-                </div>
-                <div>
-                  <% spot.tags.each do |tag| %>
-                    【tag】#<%= tag.name %> 
-                  <%end%>
-                </div>
-                </div>
+                  <div>
+                   【user】/<%= spot.user.nickname %>
+                  </div>
+                  <div>
+                   【area】/<%= spot.area.name %>
+                  </div>
+                  <div class="card__tag">
+                    <div class="card__tag__title">#tag's</div>
+                    <div class="card__tag__body">
+                      <% spot.tags.each do |tag| %>
+                      <br>#<%= tag.name %>
+                      <%end%>
+                    </div>
+                  </div>
+                 </div>
               </div>
             <% end %>
           </div>

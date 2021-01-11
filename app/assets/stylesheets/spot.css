@@ -17,10 +17,15 @@
 .new_spot_form_therd {
   display: flex;
   justify-content:space-between;
-  height: 70px;
-  width: 50%;
-  margin: 10px 0 10px 0;
+  /* height: 70px; */
+  /* width: 80%; */
+  margin: 10px 0 50px 0;
 }
+
+.input-tag {
+  width: 300px;
+}
+
 .button-spot {
   display: inline-block;
   text-align: center;
@@ -75,9 +80,15 @@
   height: 100px;
 }
 
+.show_tag_space {
+  padding-left: 20px;
+  line-height: 28px
+}
+
 .info_show {
   margin: 40px 0;
   padding: 10px;
+  
 }
 
 .info_show_text {

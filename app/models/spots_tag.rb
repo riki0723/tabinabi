@@ -12,13 +12,16 @@ class SpotsTag
   def save
     spot = Spot.create(title: title, text: text, image:image, area_id:area_id, user_id:user_id)
 
-    # tag_list = Tag.name.split(nil)
-    # tag = Tag.where(name: tag_list).first_or_initialize
-    tag = Tag.where(name: name).first_or_initialize
-    tag.save
-
+    tags = Tag.create(name: name)
+    tag_lists = tags.name.split(nil)
+    tag_lists.each do|tag_list|
+        tag = Tag.where(name: tag_list).first_or_initialize
+        tag.save
+    
     SpotTagRelation.create(spot_id: spot.id, tag_id: tag.id)
+    end
   end
+
 
   
   
