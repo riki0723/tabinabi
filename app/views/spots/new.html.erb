@@ -34,8 +34,9 @@
           <%= f.file_field :image %>
         </div>
         <div class="field">
-          <%= f.label :name, "タグ" %>
-          <%= f.text_field :name, class:"input-tag" %>
+          <%= f.label :name, "タグ【必須】" %>
+          <div>タグを複数登録する場合は半角スペースを開けてください</div>
+          <%= f.text_field :name, class:"input-tag",placeholder: "例）王道観光地 修学旅行定番 家族旅行" %>
           <div id="search-result">
           </div>
         </div>
