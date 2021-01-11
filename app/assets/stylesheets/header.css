@@ -28,8 +28,10 @@
   font-size: 17px;
   margin-top: 8px;
   padding: 6px 10px;
-  border: red solid 1px;
-  background-color: white;
+  /* border: red solid 2px; */
+  background-color: rgb(252, 178, 129);
+  border-radius: 20px;
+  color: white;
 }
 
 .mein-header-login-btn {
