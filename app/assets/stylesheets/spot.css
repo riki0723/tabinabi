@@ -80,9 +80,15 @@
   height: 100px;
 }
 
+.show_tag_space {
+  padding-left: 20px;
+  line-height: 28px
+}
+
 .info_show {
   margin: 40px 0;
   padding: 10px;
+  
 }
 
 .info_show_text {

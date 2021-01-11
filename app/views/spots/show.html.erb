@@ -28,13 +28,13 @@
         </div>
         <div class="show_main_first_right">
           <div class="show_spot_name">
-            <h3>【ユーザー】：<%= @spot.user.nickname %></h3>
-            <h3>【エリア】：<%= @spot.area.name %></h3>
-            <h3>【タグ】</h3>
+            <h3>【user】：<%= @spot.user.nickname %></h3>
+            <h3>【area】：<%= @spot.area.name %></h3>
+            <h3>【#tag's】</h3>
           </div>
-          <div class="tag_space">
+          <div class="show_tag_space">
             <% @spot.tags.each do |tag| %>
-              #<%= tag.name %> 
+              #<%= tag.name %><br>
             <% end %>
           </div>
         </div>
@@ -43,7 +43,8 @@
       <div class="info_show">
         <h3>【詳細】</h3>
         <div class="info_show_text">
-          <%= simple_format(@spot.text)%>
+          <%=safe_join(@spot.text.split("\n"),tag(:br))%>
+          <%# <%= simple_format(@spot.text)%>
         </div>
       </div>
 
@@ -63,7 +64,7 @@
         <%= form_with model: [@spot, @message] do |f| %>
         <div class="message_form">
           <div class="form-input">
-            <%= f.text_field :text ,class:"form-message"%>
+            <%= f.text_field :text ,class:"form-message",placeholder: "追加情報を入力してください" %>
           </div>
           <div class="form-btn">
             <%= f.submit '送信',class:"form-submit"  %>
