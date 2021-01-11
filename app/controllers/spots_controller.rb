@@ -1,6 +1,9 @@
 class SpotsController < ApplicationController
   def new
     @spot = SpotsTag.new
+    @text = "[テンプレシート]\n\n【address】\n住所を入力してください\n\n
+【access】\n車  ：  〇〇〜△△分\n電車：〇〇駅徒歩△△分\n\n
+【オススメpoint!!】\n・オススメポイントを記入してください！\n・オススメポイントを記入してください！\n・オススメポイントを記入してください！"
   end
 
   def create
