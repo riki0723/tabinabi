@@ -76,10 +76,16 @@
 }
 
 .info_show {
-  margin-top: 40px;
-  background-color: darkseagreen;
-  height: 500px;
+  margin: 40px 0;
   padding: 10px;
+}
+
+.info_show_text {
+  border: orange solid 1px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  line-height: 30px
 }
 
 .chat_info{
@@ -91,6 +97,7 @@
   overflow-y: scroll;
   height: 200px;
   padding-left: 20px;
+  line-height: 20px
 }
 
 .message_form{
