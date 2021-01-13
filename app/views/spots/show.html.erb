@@ -22,9 +22,9 @@
           <div class="main-image">
             <%= image_tag @spot.image.variant(resize: '600x600') %>
           </div>
-          <div class="sub_image">
+          <%# <div class="sub_image">
             複数の画像が入ります
-          </div>
+          </div> %>
         </div>
         <div class="show_main_first_right">
           <div class="show_spot_name">
@@ -34,7 +34,7 @@
           </div>
           <div class="show_tag_space">
             <% @spot.tags.each do |tag| %>
-              #<%=link_to tag.name, tag_spots_path(tag_id: tag.id) %><br>
+              #<%=link_to tag.name, tag_spots_path(tag_id: tag.id) ,class:"card_tag_list" %><br>
             <% end %>
           </div>
         </div>

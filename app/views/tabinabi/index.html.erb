@@ -19,6 +19,13 @@
 
         
         <h1 class="page-heading">観光地一覧</h1>
+        <% if @spots.length == 0%>
+        <div class="nospot_sentens">
+        NO Spots<br>
+          観光地は登録されておりません<br>
+          観光地を登録しましょう
+        </div>
+        <% end %>
         <div class="card__wrapper">
          <% @spots.each do |spot| %>
           <div class="card" >
@@ -39,9 +46,7 @@
                     <div class="card__tag__title">#tag's</div>
                     <div class="card__tag__body">
                       <% spot.tags.each do |tag| %>
-                      <%# <div class="card_tag_list"> %>
                       <br>#<%=link_to tag.name, tag_spots_path(tag_id: tag.id), class:"card_tag_list"%>
-                      <%# </div> %>
                       <%end%>
                     </div>
                   </div>
