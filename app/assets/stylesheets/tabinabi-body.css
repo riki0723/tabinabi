@@ -92,6 +92,16 @@
   line-height: 35px
 }
 
+.nospot_sentens {
+  font-size: 50px;
+  color: orange;
+  width: 100%;
+  text-align: center;
+  opacity: 0.5;
+  margin: 100px 0 200px 0;
+  
+}
+
 .info__sentens {
   margin-left : 5%;
 }
