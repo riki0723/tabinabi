@@ -20,6 +20,7 @@ class SpotsController < ApplicationController
     @spot = Spot.find(params[:id])
     @messages = @spot.messages.includes(:user)
     @message = Message.new
+    @spot_tags = @spot.tags
 
   end
 
@@ -49,6 +50,13 @@ class SpotsController < ApplicationController
     return nil if params[:keyword] == ""
     tag = Tag.where(['name LIKE ?', "%#{params[:keyword]}%"] )
     render json:{ keyword: tag }
+  end
+
+  def search_tag
+    @tag_list = Tag.all
+    @tag = Tag.find(params[:tag_id])
+    spots = Spot.all
+    @spots = @tag.spots
   end
 
   private

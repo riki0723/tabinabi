@@ -34,7 +34,7 @@
           </div>
           <div class="show_tag_space">
             <% @spot.tags.each do |tag| %>
-              #<%= tag.name %><br>
+              #<%=link_to tag.name, tag_spots_path(tag_id: tag.id) %><br>
             <% end %>
           </div>
         </div>

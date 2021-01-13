@@ -9,4 +9,8 @@ Rails.application.routes.draw do
     end
     resources :messages, only: [:create]
   end
+
+  resources :tags do
+    get 'spots', to: 'spots#search_tag'
+  end
 end

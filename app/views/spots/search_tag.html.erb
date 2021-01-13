@@ -1,24 +1,9 @@
     <main class="main">
       <div class="inner">
         <div class="top">
-
-        <div class="top_screen">
-          <img src="/assets/tabinabitop.jpg" alt="清水寺" id="image-change1" class="top_img">
-          <img src="/assets/tabinabitop2.jpg" alt="清水寺" id="image-change2" class="top_img">
-          <img src="/assets/tabinabitop3.jpg" alt="清水寺" id="image-change3" class="top_img">
-          <p class="top_name">旅navi.</p>
-        <div>
-
-        <div class="info">
-          <div class="info__sentens">
-          旅行で行った観光地やお店、旅館などを共有するアプリです<br>
-          旅行の思い出の場所をみんなで共有しましょう！<br>
-          そして新しい旅先が見つかるかも....
-          </div>
-        </div>
-
         
-        <h1 class="page-heading">観光地一覧</h1>
+        <h1 class="page-heading">#<%= @tag.name %></h1>
+
         <div class="card__wrapper">
          <% @spots.each do |spot| %>
           <div class="card" >
@@ -39,9 +24,7 @@
                     <div class="card__tag__title">#tag's</div>
                     <div class="card__tag__body">
                       <% spot.tags.each do |tag| %>
-                      <%# <div class="card_tag_list"> %>
-                      <br>#<%=link_to tag.name, tag_spots_path(tag_id: tag.id), class:"card_tag_list"%>
-                      <%# </div> %>
+                      <br>#<%=link_to tag.name, tag_spots_path(tag_id: tag.id) %>
                       <%end%>
                     </div>
                   </div>
@@ -51,12 +34,10 @@
           </div>
           <% end %>
         </div>
-        
-        <% @tag_list.each do |list| %>
-        <%= link_to list.name, tag_spots_path(tag_id: list.id) %>
-        (<%=list.spots.count%>)
+                <% @tag_list.each do |list| %>
+        <%= link_to list.name, tag_spots_path(tag_id: list.id)%>
 
-         <%end%> 
+        <%end%>
 
         <div class="inazuma">最初1234最後</div>
       </div>
