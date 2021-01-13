@@ -39,9 +39,7 @@
                     <div class="card__tag__title">#tag's</div>
                     <div class="card__tag__body">
                       <% spot.tags.each do |tag| %>
-                      <%# <div class="card_tag_list"> %>
                       <br>#<%=link_to tag.name, tag_spots_path(tag_id: tag.id), class:"card_tag_list"%>
-                      <%# </div> %>
                       <%end%>
                     </div>
                   </div>
