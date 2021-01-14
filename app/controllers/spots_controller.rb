@@ -56,7 +56,7 @@ class SpotsController < ApplicationController
     @tag_list = Tag.all
     @tag = Tag.find(params[:tag_id])
     spots = Spot.all
-    @spots = @tag.spots
+    @spots = @tag.spots.page(params[:page]).per(10).order("created_at DESC")
   end
 
   private
