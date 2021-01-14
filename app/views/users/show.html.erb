@@ -1,8 +1,9 @@
     <main class="main">
       <div class="inner">
         <div class="top">
-        
-        <h1 class="page-heading">#<%= @tag.name %></h1><% if @spots.length == 0%>
+
+        <h1 class="page-heading"><%= @nickname %>さんの投稿一覧</h1>
+        <% if @spots.length == 0%>
         <div class="nospot_sentens">
         NO Spots<br>
           観光地は登録されておりません<br>
@@ -29,7 +30,7 @@
                     <div class="card__tag__title">#tag's</div>
                     <div class="card__tag__body">
                       <% spot.tags.each do |tag| %>
-                      <br>#<%=link_to tag.name, tag_spots_path(tag_id: tag.id) ,class:"card_tag_list"%>
+                      <br>#<%=link_to tag.name, tag_spots_path(tag_id: tag.id), class:"card_tag_list"%>
                       <%end%>
                     </div>
                   </div>
@@ -39,7 +40,18 @@
           </div>
           <% end %>
         </div>
-
         <div class="inazuma">最初1234最後</div>
+        
+        <h1 class="page-heading">タグ一覧</h1>
+          <% @tag_list.each do |list| %>
+            <%= link_to tag_spots_path(tag_id: list.id) , method: :get  do%>
+              <div class="tag_list">
+                <b class="tag_list_name"><%= list.name %></b>
+                <b class="tag_list_count">(<%= list.spots.count %>)</b>
+              </div>
+            <%end%>
+          <%end%>  
+       
+        
       </div>
     </main>

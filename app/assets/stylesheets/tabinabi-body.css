@@ -99,7 +99,23 @@
   text-align: center;
   opacity: 0.5;
   margin: 100px 0 200px 0;
+}
+
+.tag_list {
+  background-color: orange;
+  margin: 4px;
+  padding: 3px;
+  display:inline-block
   
+}
+
+.tag_list_name {
+  color: white;
+}
+
+.tag_list_count{
+  background-color: white;
+  color: orange;
 }
 
 .info__sentens {
