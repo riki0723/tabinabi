@@ -2,8 +2,13 @@
       <div class="inner">
         <div class="top">
         
-        <h1 class="page-heading">#<%= @tag.name %></h1>
-
+        <h1 class="page-heading">#<%= @tag.name %></h1><% if @spots.length == 0%>
+        <div class="nospot_sentens">
+        NO Spots<br>
+          観光地は登録されておりません<br>
+          観光地を登録しましょう
+        </div>
+        <% end %>
         <div class="card__wrapper">
          <% @spots.each do |spot| %>
           <div class="card" >
@@ -34,10 +39,6 @@
           </div>
           <% end %>
         </div>
-                <% @tag_list.each do |list| %>
-        <%= link_to list.name, tag_spots_path(tag_id: list.id)%>
-
-        <%end%>
 
         <div class="inazuma">最初1234最後</div>
       </div>
