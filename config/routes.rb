@@ -13,4 +13,6 @@ Rails.application.routes.draw do
   resources :tags do
     get 'spots', to: 'spots#search_tag'
   end
+
+  resources :users, only: :show
 end

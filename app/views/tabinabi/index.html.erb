@@ -57,11 +57,10 @@
           <% end %>
         </div>
         
-        <% @tag_list.each do |list| %>
-        <%= link_to list.name, tag_spots_path(tag_id: list.id) %>
-        (<%=list.spots.count%>)
-
-         <%end%> 
+        <%# <% @tag_list.each do |list| %>
+        <%# <%= link_to list.name, tag_spots_path(tag_id: list.id) %> 
+        <%# (<%=list.spots.count%>
+         <%# <%end%>  
 
         <div class="inazuma">最初1234最後</div>
       </div>
