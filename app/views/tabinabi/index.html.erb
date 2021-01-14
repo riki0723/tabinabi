@@ -56,7 +56,7 @@
           </div>
           <% end %>
         </div>
-        <div class="inazuma">最初1234最後</div>
+        <div class="kaminari"><%= paginate(@spots) %></div>
 
         <h1 class="page-heading">タグ一覧</h1>
           <% @tag_list.each do |list| %>
