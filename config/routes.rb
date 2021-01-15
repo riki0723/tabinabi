@@ -16,4 +16,5 @@ Rails.application.routes.draw do
 
   resources :users, only: :show
   resources :hokaidoutouhoku, only: :index
+  resources :kantou, only: :index
 end
