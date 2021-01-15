@@ -1,0 +1,59 @@
+    <main class="main">
+      <div class="inner">
+        <div class="top">
+
+
+        
+        <h1 class="page-heading">中国</h1>
+        <% if @spots.length == 0%>
+        <div class="nospot_sentens">
+        NO Spots<br>
+          観光地は登録されておりません<br>
+          観光地を登録しましょう
+        </div>
+        <% end %>
+        <div class="card__wrapper">
+         <% @spots.each do |spot| %>
+          <div class="card" >
+            <%= link_to spot_path(spot.id), method: :get  do%>
+            <h2 class="card__title"><%= spot.title %></h2>
+              <div class="card__body">
+                <div class="card__body__left">
+                  <%= image_tag spot.image.variant(gravity: :center, resize:"250x200^", crop:"250x200+0+0"), class: 'card__img' %>
+                </div>
+                <div class="card__body__right">
+                  <div>
+                   【user】/<%= spot.user.nickname %>
+                  </div>
+                  <div>
+                   【area】/<%= spot.area.name %>
+                  </div>
+                  <div class="card__tag">
+                    <div class="card__tag__title">#tag's</div>
+                    <div class="card__tag__body">
+                      <% spot.tags.each do |tag| %>
+                      <br>#<%=link_to tag.name, tag_spots_path(tag_id: tag.id), class:"card_tag_list"%>
+                      <%end%>
+                    </div>
+                  </div>
+                 </div>
+              </div>
+            <% end %>
+          </div>
+          <% end %>
+        </div>
+        <div class="kaminari"><%= paginate(@spots) %></div>
+
+        <h1 class="page-heading">タグ一覧</h1>
+          <% @tag_list.each do |list| %>
+            <%= link_to tag_spots_path(tag_id: list.id) , method: :get  do%>
+              <div class="tag_list">
+                <b class="tag_list_name"><%= list.name %></b>
+                <b class="tag_list_count">(<%= list.spots.count %>)</b>
+              </div>
+            <%end%>
+          <%end%> 
+          
+      
+      </div>
+    </main>

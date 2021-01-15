@@ -1,0 +1,2 @@
+module KinkiHelper
+end
