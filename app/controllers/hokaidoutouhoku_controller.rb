@@ -5,7 +5,7 @@ class HokaidoutouhokuController < ApplicationController
     
 
     
-    # @kinki = Spot.where(area_id:25..31)
+    
     # @chuugoku = Spot.where(area_id:32..36)
     # @asikoku = Spot.where(area_id:37..40)
     # @kyuusyuuokinawa = Spot.where(area_id:41..48)
