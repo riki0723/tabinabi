@@ -1,4 +1,4 @@
-window.addEventListener('load',function(){
+function imageSercl() {
   
   const firstImage =document.getElementById("image-change1")
   const secondImage =document.getElementById("image-change2")
@@ -25,6 +25,7 @@ window.addEventListener('load',function(){
   };
   var tm = 15000;
   setTimeout(fn,tm);
+  
 
-
-})
+}
+window.addEventListener('load',imageSercl)

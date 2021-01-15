@@ -1,4 +1,5 @@
 class SpotsController < ApplicationController
+  before_action :authenticate_user!, only: [:show]
   def new
     @spot = SpotsTag.new
     @text = "[テンプレシート]\n\n【address】\n住所を入力してください\n\n
