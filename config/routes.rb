@@ -21,4 +21,5 @@ Rails.application.routes.draw do
   resources :toukai, only: :index
   resources :kinki, only: :index
   resources :chuugoku, only: :index
+  resources :shikoku, only: :index
 end
