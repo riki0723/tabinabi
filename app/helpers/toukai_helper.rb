@@ -1,0 +1,2 @@
+module ToukaiHelper
+end
