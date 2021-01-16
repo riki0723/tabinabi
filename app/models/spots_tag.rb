@@ -13,8 +13,19 @@ class SpotsTag
     spot = Spot.create(title: title, text: text, image:image, area_id:area_id, user_id:user_id)
 
     tags = Tag.create(name: name)
+
     tag_lists = tags.name.split(nil)
-    tag_lists.each do|tag_list|
+    # 半角スペースで区切る
+
+    tag_listsry = tag_lists.uniq
+    # 同じデーターは返さない
+
+
+
+
+
+
+    tag_listsry.each do|tag_list|
         tag = Tag.where(name: tag_list).first_or_initialize
         tag.save
     
