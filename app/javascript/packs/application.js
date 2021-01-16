@@ -7,10 +7,11 @@ require("@rails/ujs").start()
 // require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
-require("../imagetop")
+// require("../imagetop")
 require("./tag")
 require("../btn")
 require("../header")
+require('./preview') 
 
 
 
