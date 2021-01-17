@@ -9,12 +9,16 @@
   width: 80%;
 }
 
-.new_spot_form_second {
+.new_spot_form_therd{
+  margin: 10px 0 40px 0;
+}
+
+.new_spot_form_forth {
   height: 350px;
   margin: 10px 0 10px 0;
 }
 
-.new_spot_form_therd {
+.new_spot_form_second {
   display: flex;
   justify-content:space-between;
   /* height: 70px; */

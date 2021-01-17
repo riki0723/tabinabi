@@ -11,6 +11,7 @@ require("../imagetop")
 require("./tag")
 require("../btn")
 require("../header")
+require('./preview') 
 
 
 
