@@ -7,9 +7,9 @@
 ### 観光地の情報をユーザー同士で共有し作っていく。
 ### また、ユーザー達で作って行った情報から自らが旅行に行く時に観光地を探す事が出来る。
 
-</br>
-# 🌐URL 
-## https://tabinabi-28781.herokuapp.com/
+
+# 🌐 App URL 
+### https://tabinabi-28781.herokuapp.com/
 ### テストユーザー（e-mail:aaa@com.jp　PW:aaa111）
 
 
