@@ -20,8 +20,8 @@
 #### 2️⃣ ユーザー名からサイドバーを開き観光地登録に進み観光地を登録画面に進む
 #### 3️⃣ 観光地名、都道府県、画像、説明、タグを入力し、観光地を登録
 #### 4️⃣ 登録後はトップページに戻る
-![demo](https://gyazo.com/i.gyazo.com/63f805f6a84bdcf98d889e71ccd7da98/raw)
-<img width="1440" src="https://i.gyazo.com/63f805f6a84bdcf98d889e71ccd7da98.gif](https://i.gyazo.com/63f805f6a84bdcf98d889e71ccd7da98.gif">
+![demo](https://gyazo.com/33e6332de6902284af882773a6cc0789)
+
 
 
 
