@@ -34,13 +34,13 @@
 #### 3️⃣ 観光地の詳細、編集、削除
 　・　登録した観光地をクリックするとその観光地の詳細が表示されます。<br>
 　・　登録したユーザーのみ変更ボタンと削除ボタンが表示されます。<br>
-<img width="1440" src="https://gyazo.com/bed8f7fd3dacc6c499d64e50797d6214">
+ ![demo](https://gyazo.com/0076e3dcfcc7b8096b6ff0de7650fa42/raw)
 <br>
 <br>
 #### 4️⃣ 観光地に追加情報を登録する
 　・　登録した観光地の詳細ページにメモ形式で追加情報を入力できます<br>
 　・　非同期通信費を使用している為画面を更新せずとも表示されます。<br>
- ![demo](https://gyazo.com/0076e3dcfcc7b8096b6ff0de7650fa42/raw)
+ ![demo](https://gyazo.com/3a6042562a8e54cdafc69730ef6e4207/raw)
 
 
 # 📦  機能一覧
