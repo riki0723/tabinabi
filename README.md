@@ -79,3 +79,61 @@
 - heroku 7.46.0
 - AWS
 
+# DB設計
+
+## Userテーブル
+| Column        | Type       | Options     |
+| ------------- | ---------- | ----------- |
+| nickname      | string     | null: false |
+| email         | string     | null: false |
+| password      | string     | null: false |
+### Associate
+- has_many :spots
+- has_many :messages
+
+## Spotテーブル
+| Column        | Type       | Options                        |
+| ------------- | ---------- | ------------------------------ |
+| title         | title      | null: false                    |
+| text          | text       | null: false                    |
+| place         | area_id    | null :false                    |
+| user_id       | references | null: false, foreign_key: true |
+### Associate
+- belongs_to :user
+- belongs_to :area
+- has_one_attached :image
+- has_many :has_many :spot_tag_relations
+- has_many :has_many :tags
+- has_many :has_many :messages
+
+## Tag
+| Column  | Type       | Options                        |
+| ------- | ---------- | ------------------------------ |
+| text    | text       | null: false                    |
+| spot_id | references | null: false, foreign_key: true |
+### Associate
+- belongs_to :user
+- belongs_to :spot
+
+## SpotsTag
+| Column  | Type       | Options                        |
+| ------- | ---------- | ------------------------------ |
+| text    | text       | null: false                    |
+| tag_id | references | null: false, foreign_key: true |
+| spot_id | references | null: false, foreign_key: true |
+### Associate
+- belongs_to :tag
+- belongs_to :spot
+
+## Message
+| Column  | Type       | Options                        |
+| ------- | ---------- | ------------------------------ |
+| text    | text       | null: false                    |
+| user_id | references | null: false, foreign_key: true |
+| spot_id | references | null: false, foreign_key: true |
+### Associate
+- belongs_to :user
+- belongs_to :spot
+
+
+
