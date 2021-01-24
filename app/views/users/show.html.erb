@@ -44,12 +44,14 @@
         
         <h1 class="page-heading">タグ一覧</h1>
           <% @tag_list.each do |list| %>
+          <% if list.spots.count >= 1%>
             <%= link_to tag_spots_path(tag_id: list.id) , method: :get  do%>
               <div class="tag_list">
                 <b class="tag_list_name"><%= list.name %></b>
                 <b class="tag_list_count">(<%= list.spots.count %>)</b>
               </div>
             <%end%>
+          <%end%>
           <%end%>  
        
         
